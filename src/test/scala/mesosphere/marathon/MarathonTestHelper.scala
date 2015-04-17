@@ -20,7 +20,7 @@ trait MarathonTestHelper {
   }
 
   def defaultConfig(): MarathonConf =
-    makeConfig("--master", "127.0.0.1:5050")
+    makeConfig("--master", "127.0.0.1:5050", "--max_tasks_per_offer", "10")
 
   def makeBasicOffer(cpus: Double = 4.0, mem: Double = 16000, disk: Double = 1.0,
                      beginPort: Int = 31000, endPort: Int = 32000) = {
